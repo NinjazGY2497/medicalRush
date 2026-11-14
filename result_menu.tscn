@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cekp468mf2i8s"]
+
+[ext_resource type="Script" uid="uid://dsk24is8p7d0i" path="res://result_menu.gd" id="1_cw10h"]
+[ext_resource type="Texture2D" uid="uid://doswqdjfgdqgm" path="res://gameOver.webp" id="2_5ehgl"]
+
+[node name="GameOverMenu" type="Control" unique_id=1546223749]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cw10h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=555153096]
+position = Vector2(576, 323.75)
+scale = Vector2(0.90000004, 0.9120957)
+texture = ExtResource("2_5ehgl")
+
+[node name="tryAgainButton" type="Button" parent="." unique_id=2016570314]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 298.0
+offset_right = 696.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 50
+text = "Try Again"
+
+[node name="mainMenuButton" type="Button" parent="." unique_id=905861492]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 390.0
+offset_right = 840.0
+offset_bottom = 467.0
+theme_override_font_sizes/font_size = 50
+text = "Return to Main Menu"
+
+[connection signal="pressed" from="tryAgainButton" to="." method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="mainMenuButton" to="." method="_on_main_menu_button_pressed"]

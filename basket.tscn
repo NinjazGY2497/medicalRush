@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://hut247hhj7st"]
+
+[ext_resource type="Texture2D" uid="uid://br3asnt1fwmsl" path="res://patient.webp" id="1_7qm31"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4yrir"]
+radius = 132.30646
+
+[node name="Patient" type="Area2D" unique_id=620658042 groups=["patient"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=758645084]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_7qm31")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1252422909]
+shape = SubResource("CircleShape2D_4yrir")

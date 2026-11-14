@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://blbdc6avx3qbc"]
+
+[ext_resource type="Script" uid="uid://duggiwyauqs1n" path="res://victory_menu.gd" id="1_1sayv"]
+[ext_resource type="Texture2D" uid="uid://bgbvawu7d6u67" path="res://victory.webp" id="1_w2usb"]
+
+[node name="VictoryMenu" type="Control" unique_id=2045705999]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1sayv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1642532990]
+position = Vector2(576, 324.00003)
+scale = Vector2(0.90000004, 0.9101124)
+texture = ExtResource("1_w2usb")
+
+[node name="tryAgainButton" type="Button" parent="." unique_id=499637709]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 374.0
+offset_right = 349.0
+offset_bottom = 430.0
+theme_override_colors/font_color = Color(0.9843137, 0.70980394, 0.5372549, 1)
+theme_override_font_sizes/font_size = 30
+text = "Replay"
+
+[node name="mainMenuButton" type="Button" parent="." unique_id=103459299]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 435.0
+offset_right = 451.0
+offset_bottom = 500.0
+theme_override_colors/font_color = Color(0.9843137, 0.70980394, 0.5372549, 1)
+theme_override_font_sizes/font_size = 30
+text = "Return to Main Menu"
+
+[connection signal="pressed" from="tryAgainButton" to="." method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="mainMenuButton" to="." method="_on_main_menu_button_pressed"]

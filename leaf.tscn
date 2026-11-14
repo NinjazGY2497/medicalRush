@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dfi34lkymt5v3"]
+
+[ext_resource type="Texture2D" uid="uid://0scuodw1l1wh" path="res://pill.png" id="1_p3lty"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4yrir"]
+radius = 736.3912
+
+[node name="Medicine" type="Area2D" unique_id=1288047640 groups=["medicine"]]
+scale = Vector2(0.25, 0.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=690236024]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_p3lty")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=932808800]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CircleShape2D_4yrir")

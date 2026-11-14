@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://w8o0xr43whyw"]
+
+[ext_resource type="Texture2D" uid="uid://djbiod6liilq6" path="res://background.png" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://hut247hhj7st" path="res://basket.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://ck2ard2axf8ip" path="res://player.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dfi34lkymt5v3" path="res://leaf.tscn" id="4_1bvp3"]
+
+[node name="Node2D" type="Node2D" unique_id=1661442645]
+position = Vector2(336, 284)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1904005454]
+position = Vector2(241.63496, 40.220303)
+scale = Vector2(0.74738455, 0.6330003)
+texture = ExtResource("1_1bvp3")
+
+[node name="Patient" parent="." unique_id=620658042 instance=ExtResource("1_h2yge")]
+position = Vector2(-116, 206)
+
+[node name="Medicine" parent="." unique_id=1288047640 instance=ExtResource("4_1bvp3")]
+position = Vector2(144, 190)
+
+[node name="Player" parent="." unique_id=1549799546 groups=["medicine", "patient"] instance=ExtResource("3_1bvp3")]
+position = Vector2(487, 166)

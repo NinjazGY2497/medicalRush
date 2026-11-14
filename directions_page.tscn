@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://crumh446iga6h"]
+
+[ext_resource type="Script" uid="uid://bal2yqvanep67" path="res://directions_page.gd" id="1_jy66s"]
+[ext_resource type="Texture2D" uid="uid://csefdjxspitlr" path="res://directions.webp" id="2_jy66s"]
+
+[node name="DirectionsPage" type="Control" unique_id=1418485810]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jy66s")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1812784700]
+position = Vector2(576, 323.5)
+scale = Vector2(0.8984375, 0.9087079)
+texture = ExtResource("2_jy66s")
+
+[node name="Button" type="Button" parent="." unique_id=1309224103]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 464.0
+offset_right = 725.0
+offset_bottom = 514.0
+theme_override_colors/font_color = Color(0.9843137, 0.70980394, 0.5372549, 1)
+theme_override_font_sizes/font_size = 30
+text = "Continue to Game"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
